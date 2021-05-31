@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Box Model</title>
+	<style>
+        header{
+            width: 100%
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header > h2{
+            margin-left: 20px;
+            float: left;
+        }
+        header ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        header ul > li {
+            font-size: 20px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        a{
+            text-decoration: none;
+            outline: none;
+        }
+        a:link{color:black;}
+        a:visited{color: black; text-decoration: none}
+        a:hover{color: #7c7365}
+
+        #blank{
+            width: 300px;
+        }
+
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content{
+            display: none;
+            
+            background-color: #F9F9F9;
+            min-width: 160px;
+            padding: 8px;
+        }
+        .dropdown:hover .dropdown-content{display: block;}
+
+        #searchinput{
+            font-size: 14px;
+            width: 200px;
+            padding: 10px;
+            border: 0px;
+            outline: none;
+            float: left;
+
+            height: 20px;
+            border: 1px solid grey;
+            background: #ffffff;
+        }
+
+        .mongimg::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .img_m{
+            float: left;
+            width: 33.33%;
+        }
+
+        h1{
+            font-size:26px;
+            display:inline-block;
+            text-align:center;
+            padding: 0 50px;
+            position: relative;
+            text-transform: uppercase;
+            margin-top:0;
+            margin-bottom:0;
+        }
+        h1::before{
+            position: absolute;
+            content: "";
+            background-color: #7c7365;
+            width: 32px;
+            height: 3px;
+            top: 50%;
+            left: 0px;
+            z-index:1;
+            transform: translateX(0);
+        }
+        h1::after{
+            position: absolute;
+            content: "";
+            background-color: #7c7365;
+            width: 32px;
+            height: 3px;
+            top: 50%;
+            right: 0px;
+            z-index:1;
+            transform: translateX(0);
+        }
+        .categorie_logo{
+            padding: 13px 0 32px;
+            height:70.6px;
+            width:90%;
+            margin:auto;
+            text-align:center;
+}
+	</style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <header>
+            <h2><image src="http://dengdengfit.co.kr/wp-content/uploads/2021/01/logo.png"
+                style="width: 100px; height:60px"></h2>
+            <div id="blank"></div>
+            <nav>
+                <ul>
+                    <li><a href="">ALL</a></li>
+                    <li><a href="">EXHIBITIONS</a></li>
+                    <li><a href="">COMMUNITY</a></li>
+                    <li><a href="">BEST</a></li>                    </ul>
+            </nav>
+            <div id="blank2"></div>
+            
+            <ul>
+                <li></li>
+                <li><div class="dropdown">
+                    <div><image src="https://cdn0.iconfinder.com/data/icons/very-basic-2-android-l-lollipop-icon-pack/24/search-512.png"
+                          style="width: 20px; height: 20px;"></div>
+                    <div class="dropdown-content">
+                        <input id="searchinput" type="search" placeholder="Search ...">
+                    </div>
+                    <div></div>
+                </div></li>
+                <li></li>
+            </ul>
+
+            </header>
+        </div>
+        <div class="mongimg">
+            <div class="img_m">
+                <img src="http://dengdengfit.co.kr/wp-content/uploads/2021/01/chihuahua-2769980_1920-e1611979045651.jpg"
+                style="width: 100%;">
+            </div>
+            <div class="img_m">
+                <img src="http://dengdengfit.co.kr/wp-content/uploads/2016/01/FILEminimizer-6-e1611978807759.jpg"
+                style="width: 100%;">
+            </div>
+            <div class="img_m">
+                <img src="http://dengdengfit.co.kr/wp-content/uploads/2021/01/dog-2583282_1920-e1611979126443.jpg"
+                style="width: 100%;">
+            </div>
+        </div>
+
+        <div class="categorie_logo">
+            <h1>
+                CATEGORIES
+            </h1>
+            <div style="color: #999; font-size: 14px;">We Understand That Your Pets Are More Than Just Pets, They're Family.</div>
+        </div>
+        <header style="width:80%; margin:auto;">
+            <ul>
+                <li><a href="">ALL</a></li>
+                <li><a href="">ACCESSORIES</a></li>
+                <li><a href="">BELTS</a></li>
+                <li><a href="">CAGES</a></li>
+                <li><a href="">FOOD CONTAINERS</a></li>
+            </ul>
+        </header>
+    </div>
+
+  	
+</body>
+
+</html>
